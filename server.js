@@ -6,7 +6,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Backend alive");
 });
-
 import crypto from "crypto";
 import { createClient } from "@supabase/supabase-js";
 
@@ -43,6 +42,7 @@ app.post("/paystack-webhook", express.raw({ type: "application/json" }), async (
 
   res.sendStatus(200);
 });
+
 app.use("/paystack-webhook", express.raw({ type: "application/json" }));
 app.use(express.json());
 
