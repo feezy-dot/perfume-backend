@@ -1,3 +1,4 @@
+import { createClient } from "@supabase/supabase-js";
 import express from "express";
 
 const app = express();
@@ -7,7 +8,6 @@ app.get("/", (req, res) => {
   res.send("Backend alive");
 });
 import crypto from "crypto";
-import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
